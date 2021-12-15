@@ -6,6 +6,7 @@ import com.brownSecurity.oauth2.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,6 +23,11 @@ public class AuthenticationController {
     public ResponseEntity<MyUser> authenticate(){
 
         return null;
+    }
+
+    @GetMapping(value = "/login")
+    public String showForm(){
+        return "index";
     }
 
     @PostMapping(value = "/register")

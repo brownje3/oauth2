@@ -11,9 +11,9 @@ import java.util.List;
 
 @Entity
 @Getter @Setter
+@Table(name = "users")
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 @NoArgsConstructor(onConstructor = @__(@Autowired))
-@Component
 public class MyUser {
     public MyUser(RegistrationDTO registrationDTO, PasswordEncoder encoder){
         firstName = registrationDTO.getFirstName();

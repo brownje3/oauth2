@@ -20,7 +20,7 @@ public class Role {
     private String name;
 
     @ManyToMany(mappedBy = "roles")
-    private ArrayList<MyUser> users;
+    private List<MyUser> users;
 
     @ManyToMany
     private List<Privilege> privileges;

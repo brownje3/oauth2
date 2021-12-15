@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter @Setter
@@ -19,5 +20,5 @@ public class Privilege {
     private String name;
 
     @ManyToMany(mappedBy = "privileges")
-    private ArrayList<Role> roles;
+    private List<Role> roles;
 }
