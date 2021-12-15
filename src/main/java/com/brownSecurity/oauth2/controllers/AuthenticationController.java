@@ -1,8 +1,7 @@
 package com.brownSecurity.oauth2.controllers;
 
 import com.brownSecurity.oauth2.DTOs.RegistrationDTO;
-import com.brownSecurity.oauth2.models.MyUser;
-import com.brownSecurity.oauth2.models.MyUserDetails;
+import com.brownSecurity.oauth2.models.*;
 import com.brownSecurity.oauth2.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,7 +19,7 @@ public class AuthenticationController {
     }
 
     @PostMapping(value = "/login")
-    public ResponseEntity<MyUserDetails> authenticate(){
+    public ResponseEntity<MyUser> authenticate(){
 
         return null;
     }

@@ -1,10 +1,7 @@
 package com.brownSecurity.oauth2.services;
 
 import com.brownSecurity.oauth2.DTOs.RegistrationDTO;
-import com.brownSecurity.oauth2.models.MyUser;
-import com.brownSecurity.oauth2.models.MyUserDetails;
-import com.brownSecurity.oauth2.models.Privilege;
-import com.brownSecurity.oauth2.models.Role;
+import com.brownSecurity.oauth2.models.*;
 import com.brownSecurity.oauth2.repository.RoleRepo;
 import com.brownSecurity.oauth2.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +37,7 @@ public class UserService implements UserDetailsService {
         try {
             MyUser myUser = userRepo.findByUsername(username);
 
-            return new MyUserDetails(myUser);
+            return new Details(myUser);
         } catch (Exception e) {
             throw new UsernameNotFoundException(String.format("MyUser with username: %s not found", username));
         }

@@ -8,10 +8,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class MyUserDetails implements UserDetails {
+public class Details implements UserDetails {
     private final MyUser myUser;
 
-    public MyUserDetails(MyUser myUser){
+    public Details(MyUser myUser){
         this.myUser = myUser;
     }
 
@@ -56,3 +56,4 @@ public class MyUserDetails implements UserDetails {
         return myUser.isActive();
     }
 }
+
